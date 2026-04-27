@@ -17,8 +17,6 @@
             color: var(--text);
             margin: 0;
             padding: 0;
-            overflow: auto;
-            height: auto;
         }
 
         header {
@@ -30,7 +28,7 @@
 
         nav {
             background-color: var(--text);
-            padding: 10px;
+            padding: 15px;
             text-align: center;
         }
 
@@ -43,14 +41,15 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
+        /* 2-Column Configuration */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 30px;
         }
 
@@ -59,34 +58,41 @@
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.2s;
+            background: white;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 8px 8px 0px var(--primary);
+            box-shadow: 8px 8px 0px var(--text);
         }
 
         iframe {
             width: 100%;
             aspect-ratio: 16 / 9;
             border: none;
-            background: #eee;
+            background: #000;
         }
 
         .content {
-            padding: 15px;
-            border-top: 2px solid var(--text);
+            padding: 20px;
+            border-top: 3px solid var(--text);
         }
 
-        h2 { margin-top: 0; }
-        p { line-height: 1.6; color: #444; }
+        h2 { margin-bottom: 20px; text-transform: uppercase; }
+        h3 { margin-top: 0; color: #000; }
+        p { line-height: 1.5; color: #333; margin-bottom: 0; }
+
+        /* Responsive: Stack to 1 column on mobile */
+        @media (max-width: 768px) {
+            .video-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>THE READING PRESENTATIONS</h1>
-        <p>STUDENTS WORK FOR THE BOOK CLUB PRESENTATIONS</p>
+        <p>STUDENT WORK FOR THE BOOK CLUB PRESENTATIONS</p>
     </header>
 
     <nav>
@@ -100,24 +106,24 @@
             <div class="card">
                 <iframe src="assets/gregor_the_overlander_report-zaki.mp4"></iframe>
                 <div class="content">
-                    <h3>Zaki's group, the Gregor the Overlander Presentation</h3>
-                    <p>Something about a underlander named gregor.</p>
+                    <h3>Zaki's Group: Gregor the Overlander</h3>
+                    <p>A presentation about an underlander named Gregor.</p>
                 </div>
             </div>
 
-             <div class="card">
+            <div class="card">
                 <iframe src="assets/Artemis Fowl - Niko Group.mp4"></iframe>
                 <div class="content">
-                    <h3>Artemis Fowl, Niko's Group's presenation</h3>
-                    <p>A presentaion about Artemis Fowl By Niko's group </p>
+                    <h3>Niko's Group: Artemis Fowl</h3>
+                    <p>A presentation about Artemis Fowl by Niko's group.</p>
                 </div>
             </div>
 
             <div class="card">
                 <iframe src="assets/Artemis_fowl-alex.mp4"></iframe>
                 <div class="content">
-                    <h3>Artemis Fowl Presentation, Alex's Group</h3>
-                    <p>Something About Artemis Fowl. Made by alex's group.</p>
+                    <h3>Alex's Group: Artemis Fowl</h3>
+                    <p>Something about Artemis Fowl. Made by Alex's group.</p>
                 </div>
             </div>
 
