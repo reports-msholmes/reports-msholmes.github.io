@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Portal - Book Reports</title>
+    <style>
+        :root {
+            --primary: #FFD700; /* Yellow */
+            --bg: #FFFFFF;      /* White */
+            --text: #1A1A1A;    /* Black */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--text);
+        }
+
+        nav {
+            background-color: var(--text);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            border: 3px solid var(--text);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px var(--primary);
+        }
+
+        iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+            background: #eee;
+        }
+
+        .content {
+            padding: 15px;
+            border-top: 2px solid var(--text);
+        }
+
+        h2 { margin-top: 0; }
+        p { line-height: 1.6; color: #444; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>LITERARY HUB</h1>
+        <p>Exploring the world through books</p>
+    </header>
+
+    <nav>
+        <a href="science_pages.html">Go to Science Reports →</a>
+    </nav>
+
+    <div class="container">
+        <h2>Book Report Collection</h2>
+        <div class="video-grid">
+            
+            <div class="card">
+                <iframe src="assets/gregor_the_overlander_report-zaki.mp4"></iframe>
+                <div class="content">
+                    <h3>The Great Gatsby Analysis</h3>
+                    <p>A deep dive into the symbolism of the green light and the American Dream in the 1920s.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <iframe src="assets/book_report_2.mp4"></iframe>
+                <div class="content">
+                    <h3>1984 & Surveillance</h3>
+                    <p>Discussing George Orwell's vision of the future and its relevance to modern privacy.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
