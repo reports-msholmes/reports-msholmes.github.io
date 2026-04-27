@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Portal - Science Reports</title>
+    <style>
+        :root {
+            --primary: #FFD700;
+            --bg: #FFFFFF;
+            --text: #1A1A1A;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--text);
+            color: var(--primary);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--primary);
+        }
+
+        nav {
+            background-color: var(--primary);
+            padding: 15px;
+            text-align: center;
+            border-bottom: 3px solid var(--text);
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* 2-Column Configuration */
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            border: 3px solid var(--text);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            background: white;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 0px var(--primary);
+        }
+
+        iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+            background: #000;
+        }
+
+        .content {
+            padding: 20px;
+            border-top: 3px solid var(--text);
+        }
+
+        h2 { margin-bottom: 20px; text-transform: uppercase; }
+        h3 { margin-top: 0; }
+        p { line-height: 1.5; color: #333; margin-bottom: 0; }
+
+        @media (max-width: 768px) {
+            .video-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SCIENCE REPORTS</h1>
+        <p>LAB EXPERIMENTS AND SCIENTIFIC DISCOVERIES</p>
+    </header>
+
+    <nav>
+        <a href="index.html">← Back to Book Reports</a>
+    </nav>
+
+    <div class="container">
+        <h2>Science Project Collection</h2>
+        <div class="video-grid">
+            
+            <div class="card">
+                <iframe src="assets/science_video_1.mp4"></iframe>
+                <div class="content">
+                    <h3>Experiment: Chemical Reactions</h3>
+                    <p>Observation of how different catalysts affect reaction speeds in a controlled environment.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <iframe src="assets/science_video_2.mp4"></iframe>
+                <div class="content">
+                    <h3>Physics: Laws of Motion</h3>
+                    <p>A group presentation demonstrating Newton's three laws using simple household objects.</p>
+                </div>
+            </div>
+
+            </div>
+    </div>
+
+    <script>
+        console.log("Science page initialized.");
+    </script>
+</body>
+</html>
